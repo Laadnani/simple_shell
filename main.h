@@ -10,5 +10,12 @@
 
 char *readline(void);
 
+/*HELPER FUNCS*/
+
+char *_strchr(char *s, char c);
+int _strcmp(char *s1, char *s2);
+char *_strcpy(char *dest, char *src);
+size_t _strlen(char *str);
+char *_strcat(char *dest, char *src);
 
 #endif
