@@ -10,7 +10,7 @@
 
 char *readline(void);
 
-/*HELPER FUNCS*/
+/*HELPER STRING FUNCS*/
 
 char *_strchr(char *s, char c);
 int _strcmp(char *s1, char *s2);
