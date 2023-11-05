@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** *_strdup - duplicate a sting
+/**
+ * *_strdup - duplicate a sting
  * @str: a sting to duplicate
  * Return: duplicated new string
  */
@@ -8,27 +9,26 @@
 char *_strdup(const char *str)
 {
 	char *p;
-	int i = 0;
+	int i;
 	int len = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	while (*str != '\0')
+	while (str[len])
 	{
-		len ++;
-		str++;
+		len++;
 	}
-	str = str - len;
 	p = malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	for (; i <= len; i++)
+	for (i = 0; str[i]; i++)
 	{
 		p[i] = str[i];
 	}
+	p[i] = '\0';
 	return (p);
 }

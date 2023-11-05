@@ -7,13 +7,12 @@
  * Return: well it depends but mostly 0
  */
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	char *inp = NULL;
-	int **commands = NULL;
+	char **commands = NULL;
 	int status = 0;
 	(void) argc;
-	(void) argv;
 
 	while (1)
 	{
@@ -26,8 +25,11 @@ int main(int argc, char** argv)
 			}
 			return (status);
 		}
-		free(inp);
 		commands = to_tokens(inp);
-		/*status = _execute(commands, argv);*/
+		if (commands == NULL)
+		{
+			continue;
+		}
+		status = _execute(commands, argv);
 	}
 }

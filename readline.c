@@ -21,5 +21,9 @@ char *readline(void)
 		free(line);
 		return (NULL);
 	}
+	if (line[n - 1] == '\n')
+	{
+		line[n - 1] = '\0';
+	}
 	return (line);
 }
