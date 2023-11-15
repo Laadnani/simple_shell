@@ -5,7 +5,7 @@
  * @str: an array to free
  */
 
-void clearpath(char ***str)
+void clearpath(char **str)
 {
 	int i = 0;
 
@@ -13,12 +13,12 @@ void clearpath(char ***str)
 	{
 		return;
 	}
-	while ((*str[i]))
+	while (str[i])
 	{
-		free(*str[i]);
-		(*str)[i] = NULL;
+		free(str[i]);
+		(str)[i] = NULL;
 		i++;
 	}
-	free(*str);
-	*str = NULL;
+	free(str);
+	str = NULL;
 }
