@@ -8,7 +8,8 @@ char **to_tokens(char *line)
 {
 	char *tok, *dup, **commands = NULL;
 	char d[] = " \t\n";
-	int count, i = 0;
+	int count = 0;
+	 i = 0;
 
 	if (line == NULL)
 		return (NULL);
