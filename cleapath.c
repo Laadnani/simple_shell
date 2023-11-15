@@ -9,7 +9,7 @@ void clearpath(char **str)
 {
 	int i = 0;
 
-	if (!str)
+	if (!str || !(*str) || str == NULL)
 	{
 		return;
 	}
