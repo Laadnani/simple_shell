@@ -23,7 +23,6 @@ int _execute(char **args, char **path)
 		if (execve(args[0], args, environ) == -1)
 		{
 			perror(path[0]);
-			clearpath(args);
 			exit(0);
 		}
 	}
@@ -32,5 +31,6 @@ int _execute(char **args, char **path)
 		waitpid(child_pid, &status, 0);
 		clearpath(args);
 	}
+	clearpath(args);
 	return (WEXITSTATUS(status));
 }

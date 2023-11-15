@@ -19,5 +19,5 @@ void clearpath(char **str)
 		str[i] = NULL;
 		i++;
 	}
-	free(str);
+	free(*str);
 }
