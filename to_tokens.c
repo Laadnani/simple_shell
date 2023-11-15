@@ -6,12 +6,12 @@
  */
 char **to_tokens(char *line)
 {
-	char *tok, *dup, **commands = NULL;
+	char *tok = NULL, *dup = NULL, **commands = NULL;
 	char d[] = " \t\n";
 	int count = 0;
 	int i = 0;
 
-	if (line == NULL)
+	if (!line)
 		return (NULL);
 	dup = _strdup(line);
 	if (dup == NULL)
