@@ -14,11 +14,6 @@ char **to_tokens(char *line)
 	if (!line)
 		return (NULL);
 	dup = _strdup(line);
-	if (dup == NULL)
-	{
-		free(line);
-		return (NULL);
-	}
 	tok = strtok(dup, d);
 	if (tok == NULL)
 	{
