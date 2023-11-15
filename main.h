@@ -15,7 +15,7 @@ extern char **environ;
 char *readline(void);
 char **to_tokens(char *line);
 int _execute(char **args, char **path);
-void clearpath(char **str);
+void clearpath(char ***str);
 
 /*HELPER STRING FUNCS*/
 

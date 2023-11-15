@@ -23,14 +23,14 @@ int _execute(char **args, char **path)
 		if (execve(args[0], args, environ) == -1)
 		{
 			perror(path[0]);
-			clearpath(args);
+			clearpath(&args);
 			exit(0);
 		}
 	}
 	else
 	{
 		waitpid(child_pid, &status, 0);
-		clearpath(args);
+		clearpath(&args);
 	}
 	return (WEXITSTATUS(status));
 }
