@@ -6,7 +6,8 @@
  */
 char **to_tokens(char *line)
 {
-	char *tok = NULL, *dup = NULL, **commands = NULL;
+	char *tok = NULL, *dup = NULL;
+	char **commands = NULL;
 	char d[] = " \t\n";
 	int count = 0;
 	int i = 0;
