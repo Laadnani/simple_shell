@@ -24,6 +24,7 @@ int _execute(char **args, char **path)
 		{
 			perror(path[0]);
 			clearpath(args);
+			exit(0);
 		}
 	}
 	else
