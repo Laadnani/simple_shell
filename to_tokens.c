@@ -40,6 +40,7 @@ char **to_tokens(char *line)
 		commands[i++] = tok;
 		tok = strtok(NULL, d);
 	}
+	free(line);
 	commands[i] = NULL;
 	free(dup);
 	return (commands);
